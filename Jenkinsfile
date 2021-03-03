@@ -20,14 +20,16 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
-                bat 'cd build'
-                bat 'git init'
-                bat 'git remote add build https://github.com/bear157/myapp.git'
+                dir('build') {
+                    bat 'git init'
+                    bat 'git remote add build https://github.com/bear157/myapp.git'
                 
-                bat 'git add .'
-                bat 'git commit -m "build"'
-                bat 'git checkout gh-pages'
-                bat 'git push build gh-pages'
+                    bat 'git add .'
+                    bat 'git commit -m "build"'
+                    bat 'git checkout gh-pages'
+                    bat 'git push build gh-pages'
+                }
+                
 
                 echo 'Deploying stage end...'
             }
