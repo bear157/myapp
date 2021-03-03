@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
+                bat 'git push origin :gh-pages'
                 bat 'cd build'
                 bat 'git init'
                 bat 'git remote add build https://github.com/bear157/myapp.git'
