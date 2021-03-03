@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
-                bat 'npm run deploy'
+                bat 'npm run test-deploy'
 
 
                 echo 'Deploying stage end...'
