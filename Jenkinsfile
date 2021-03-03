@@ -1,11 +1,6 @@
 pipeline {
     agent any
     
-    //Setting the environment variables DISABLE_AUTH and DB_ENGINE
-    environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'mysql'
-    }
 
     stages {
 
@@ -25,9 +20,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying stage...'
-                
-                bat 'npm run test-deploy-jx'
-                
+                withCredentials([usernamePassword(credentialsId: 'bear157', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                    bat 'npm run test-deploy-jx'
+                }
                 echo 'Deploying stage end...'
             }
         }
