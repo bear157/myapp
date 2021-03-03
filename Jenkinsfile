@@ -18,28 +18,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying stage...'
-
-                dir('build') {
-                    
-                    withCredentials([usernamePassword(credentialsId: 'bear157', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
-                        echo USERNAME
-                        echo PASSWORD
-                    
-                        bat 'git init'
-                        bat 'git remote add build https://github.com/bear157/myapp.git'
-                    
-                        bat 'git add .'
-                        bat 'git commit -m "build"'
-                        bat 'git branch gh-pages'
-                        bat 'git checkout gh-pages'
-                        
-
-                        
-                        bat 'git push https://${USERNAME}:${PASSWORD}@github.com/bear157/myapp.git gh-pages'
-                    }
-                }
                 
-
+                bat 'gh-pages -d build -r https://davy21:$GITHUB_PASSWORD@github.com/davy21/index.git'
+                
                 echo 'Deploying stage end...'
             }
         }
