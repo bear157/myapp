@@ -18,9 +18,6 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
-                bat 'git config --global user.email "jxyee981101@gmail.com"'
-                bat 'git config --global user.name "bear157"'
-
                 bat 'npm run deploy'
 
                 echo 'Deploying stage end...'
