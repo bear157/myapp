@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
                 
-                bat 'npm run test-deploy-davy'
+                bat 'npm run test-deploy-jx'
                 
                 echo 'Deploying stage end...'
             }
