@@ -20,7 +20,7 @@ pipeline {
 
                 bat 'git config --global user.email "jxyee981101@gmail.com"'
                 bat 'git config --global user.name "bear157"'
-                bat 'git remote set-url origin https://secret.ACTIONS_DEPLOY_ACCESS_TOKEN@github.com/myapp'
+                bat 'git remote set-url origin "https://secret.ACTIONS_DEPLOY_ACCESS_TOKEN@github.com/bear157/myapp"'
 
                 bat 'npm run deploy'
 
