@@ -32,7 +32,10 @@ pipeline {
                         bat 'git commit -m "build"'
                         bat 'git branch gh-pages'
                         bat 'git checkout gh-pages'
-                        bat 'git push build gh-pages'
+                        
+
+                        
+                        bat 'git push https://${USERNAME}:${PASSWORD}@github.com/bear157/myapp.git gh-pages'
                     }
                 }
                 
