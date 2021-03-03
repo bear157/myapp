@@ -20,9 +20,19 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying stage...'
-                // withCredentials([usernamePassword(credentialsId: 'bear157', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
-                    bat 'npm run test-deploy-jx'
-                // }
+                dir('build') {
+                        bat 'git init'
+                        // bat 'git remote add build https://github.com/bear157/myapp.git'
+                    
+                        bat 'git add .'
+                        bat 'git commit -m "build"'
+                        bat 'git branch gh-pages'
+                        bat 'git checkout gh-pages'
+                        
+                        
+                        bat 'git push https://bear157:%GITHUB_PASSWORD%@github.com/bear157/myapp --branch gh-pages'
+                    
+                }
                 echo 'Deploying stage end...'
             }
         }
