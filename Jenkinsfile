@@ -7,7 +7,7 @@ pipeline {
                 echo 'building stage...'
                 
                 bat 'npm install'
-                bat 'npm install gh-pages --save-dev'
+                
                 bat 'npm run build'         
 
                 echo 'building stage end...'
