@@ -20,7 +20,7 @@ pipeline {
 
                 bat 'cd build'
                 bat 'git init'
-                bat 'remote add build https://github.com/bear157/myapp.git'
+                bat 'git remote add build https://github.com/bear157/myapp.git'
                 bat 'git branch gh-pages'
                 bat 'git add .'
                 bat 'git commit -m "build"'
