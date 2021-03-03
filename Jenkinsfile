@@ -16,7 +16,7 @@ pipeline {
 
         stage("Pre-deploy") {
             steps {
-                bat 'git push origin :gh-pages'
+                
                 bat 'cd build'
                 bat 'git init'
             }
