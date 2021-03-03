@@ -18,14 +18,8 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
-                bat 'git branch -r'
-                bat 'git branch -l'
+                bat 'gh-pages -d build -r https://554be9a0cc41eacab546917b3f3606b407d5bd93@github.com/bear157/myapp.git'
 
-                bat 'git config --global user.email "jxyee981101@gmail.com"'
-                bat 'git config --global user.name "bear157"'
-                bat 'git remote set-url origin "https://secret.ACTIONS_DEPLOY_ACCESS_TOKEN@github.com/bear157/myapp"'
-
-                bat 'npm run deploy'
 
                 echo 'Deploying stage end...'
             }
