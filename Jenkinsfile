@@ -14,21 +14,16 @@ pipeline {
             }
         }
 
-        stage("Pre-deploy") {
-            steps {
-                
-                bat 'cd build'
-                bat 'git init'
-            }
-        }
+        
 
         stage('Deploy') {
             steps {
                 echo 'Deploying stage...'
 
-                
+                bat 'cd build'
+                bat 'git init'
                 bat 'git remote add build https://github.com/bear157/myapp.git'
-                bat 'git branch gh-pages'
+                
                 bat 'git add .'
                 bat 'git commit -m "build"'
                 bat 'git checkout gh-pages'
