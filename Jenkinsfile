@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
                 
-                bat 'gh-pages -d build -r https://davy21:$GITHUB_PASSWORD@github.com/davy21/index.git'
+                bat 'npm run test-deploy-davy'
                 
                 echo 'Deploying stage end...'
             }
