@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
-                bat 'gh-pages -d build -r https://554be9a0cc41eacab546917b3f3606b407d5bd93@github.com/bear157/myapp.git'
+                bat 'npm run deploy'
 
 
                 echo 'Deploying stage end...'
