@@ -20,6 +20,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying stage...'
+
+                bat 'git push https://bear157:%GITHUB_PASSWORD%@github.com/bear157/myapp :gh-pages'
+
                 dir('build') {
                         bat 'git init'
                         // bat 'git remote add build https://github.com/bear157/myapp.git'
