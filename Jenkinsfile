@@ -30,7 +30,7 @@ pipeline {
                         bat 'git checkout gh-pages'
                         
                         
-                        bat 'git push https://bear157:%GITHUB_PASSWORD%@github.com/bear157/myapp --branch gh-pages'
+                        bat 'git push https://bear157:%GITHUB_PASSWORD%@github.com/bear157/myapp gh-pages'
                     
                 }
                 echo 'Deploying stage end...'
