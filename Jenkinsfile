@@ -1,6 +1,12 @@
 pipeline {
     agent any
     
+    //Setting the environment variables DISABLE_AUTH and DB_ENGINE
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'mysql'
+    }
+
     stages {
 
         stage('Build') {
