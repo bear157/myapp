@@ -26,6 +26,7 @@ pipeline {
                 
                     bat 'git add .'
                     bat 'git commit -m "build"'
+                    bar 'git branch gh-pages'
                     bat 'git checkout gh-pages'
                     bat 'git push build gh-pages'
                 }
