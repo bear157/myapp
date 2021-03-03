@@ -18,6 +18,8 @@ function App() {
           Learn React with Jenkins
         </a>
       </header>
+
+      <p>Hello Jenkins.</p>
     </div>
   );
 }

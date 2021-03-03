@@ -18,8 +18,14 @@ pipeline {
             steps {
                 echo 'Deploying stage...'
 
-                bat 'npm run test-deploy'
-
+                bat 'cd build'
+                bat 'git init'
+                bat 'remote add build https://github.com/bear157/myapp.git'
+                bat 'git branch gh-pages'
+                bat 'git add .'
+                bat 'git commit -m "build"'
+                bat 'git checkout gh-pages'
+                bat 'git push build gh-pages'
 
                 echo 'Deploying stage end...'
             }
