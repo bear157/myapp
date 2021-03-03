@@ -20,9 +20,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying stage...'
-                withCredentials([usernamePassword(credentialsId: 'bear157', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                // withCredentials([usernamePassword(credentialsId: 'bear157', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     bat 'npm run test-deploy-jx'
-                }
+                // }
                 echo 'Deploying stage end...'
             }
         }
