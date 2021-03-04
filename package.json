@@ -17,7 +17,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -r https://github.com/bear157/myapp.git",
     "test-deploy": "gh-pages -d build -r https://554be9a0cc41eacab546917b3f3606b407d5bd93@github.com/bear157/myapp.git",
-    "test-deploy-jx": "gh-pages -d build -r https://bear157:%GITHUB_PASSWORD%@github.com/bear157/myapp",
+    "test-deploy-jx": "gh-pages -d build -r https://secret.MYAPP_SECRET@github.com/bear157/myapp",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
