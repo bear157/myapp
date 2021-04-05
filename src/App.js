@@ -10,7 +10,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <p>Hello Jenkins. (gh-pages)</p>
+        <p>Hello Jenkins. (feature branch)</p>
         <a
           className="App-link"
           href="https://reactjs.org"
